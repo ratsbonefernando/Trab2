@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo Econômico - Fernando Augusto Ratsbone de Andrade</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        header h1 {
+            color: #0e5e6f;
+            font-size: 32px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            color: #0a3d62;
+            border-left: 6px solid #38ada9;
+            padding-left: 10px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .economy-box {
+            background-color: #eafaf8;
+            padding: 15px;
+            border-left: 5px solid #38ada9;
+            margin-bottom: 20px;
+        }
+        footer {
+            text-align: center;
+            color: #666;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+        #skillsChart {
+            max-width: 600px;
+            margin: 30px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Curriculum Vitae<br>Fernando Augusto Ratsbone de Andrade</h1>
+            <p><em>Economista em formação</em></p>
+        </header>
+
+        <div class="section">
+            <h2>1. Perfil Pessoal</h2>
+            <div class="economy-box">
+                <p><strong>Objetivo:</strong> Buscar uma oportunidade como jovem aprendiz para desenvolver habilidades e experiências profissionais para poder crescer junto à empresa.</p>
+                <p><strong>Telefone:</strong> +55 (89) 98150-3870</p>
+                <p><strong>Data de Nascimento:</strong> 07/09/2007</p>
+                <p><strong>Email:</strong> fernando.andrade@ufpi.edu.br</p>
+                <p><strong>Estado Civil:</strong> Solteiro</p>
+                <p><strong>Sexo:</strong> Masculino</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>2. Formação</h2>
+            <div class="economy-box">
+                <p>Ensino Médio com curso Técnico em Informática (em andamento)<br>Colégio Técnico de Bom Jesus - Conclusão prevista: 2025</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>3. Conhecimentos Técnicos</h2>
+            <ul>
+                <li>Pacote Office: Word, Excel, PowerPoint</li>
+                <li>Noções de HTML e CSS</li>
+                <li>Edição básica de imagens e vídeos</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. Idiomas</h2>
+            <ul>
+                <li>Inglês: Intermediário (conversação e compreensão)</li>
+                <li>Espanhol: Básico</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>5. Projetos e Eventos</h2>
+            <ul>
+                <li>Projeto de pesquisa (PIBIC) na área de informática: <br>Criação de sistema para restaurantes universitários da UFPI</li>
+                <li>Participação no Congresso Científico SIUFPI - 2024</li>
+                <li>Experiência como auxíliar de aprendizagem(Programação)</li>
+
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>6. Cursos</h2>
+            <ul>
+                <li>Curso Técnico em Informática (em andamento)</li>
+                <li>Curso de Língua Inglesa – LOL Idiomas</li>
+                <li>Curso de Gêneros Textuais – CTF/UFPI</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>7. Interesses Pessoais - Tendências de Investimento</h2>
+            <ul>
+                <li>Geografia e interações humanas</li>
+                <li>Aprendizado de idiomas</li>
+                <li>Leitura</li>
+                <li>Intercâmbio cultural</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>8. Gráfico de Habilidades</h2>
+            <canvas id="skillsChart"></canvas>
+        </div>
+
+        <footer>
+            <p>30/04/2025</p>
+            <p>Fernando Augusto Ratsbone de Andrade</p>
+        </footer>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('skillsChart').getContext('2d');
+        const skillsChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Proatividade', 'Comunicação', 'Organização', 'Responsável', 'Pontual', 'Resiliente'],
+                datasets: [{
+                    label: 'MInhas habilidades (%)',
+                    data: [85, 75, 60, 70, 70, 50],
+                    backgroundColor: '#38ada9'
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
